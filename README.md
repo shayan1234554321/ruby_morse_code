@@ -72,7 +72,7 @@ In order to run this project you need:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Check more codes**
+- **Check more codes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
