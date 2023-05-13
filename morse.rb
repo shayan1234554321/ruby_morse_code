@@ -15,27 +15,28 @@ def decode_char(morse_char)
   }
 
   inverted_morse_code = morse_code.invert
-  return inverted_morse_code[morse_char]
+
+  inverted_morse_code[morse_char]
 end
 
 def decode_word(morse_word)
-  morse_chars = morse_word.split(' ')
-  decoded = ''
+  morse_chars = morse_word.split
+  decoded_word = ''
   morse_chars.each do |morse_char|
-    decoded += decode_char(morse_char)
+    decoded_word += decode_char(morse_char)
   end
-  return decoded
+  decoded_word
 end
 
 def decode(morse_code)
-  words = morse_code.split('   ')
-  decoded = ''
-  words.each do |morse_word|
-    decoded += decode_word(morse_word) + " "
+  morse_words = morse_code.split('   ')
+  decoded_message = ''
+  morse_words.each do |morse_word|
+    decoded_message += "#{decode_word(morse_word)} "
   end
-  return decoded
+  decoded_message.strip
 end
 
 morse_code = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 
-print decode(morse_code) # A BOX FULL OF RUBIES
+puts decode(morse_code) #=> "A BOX FULL OF RUBIES"
